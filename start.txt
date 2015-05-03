@@ -1,0 +1,3 @@
+forever -o logs/out.log -e logs/err.log start server.js
+
+forever stop server.js
