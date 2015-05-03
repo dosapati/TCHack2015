@@ -8,6 +8,8 @@
 
 var express = require('express');
 var app = express();
+var unirest = require('unirest');
+
 
 var google = require('google')
 var youtube = require ('youtube-feeds');
@@ -20,6 +22,14 @@ app.get('/suggest/:searchText', function (req, res) {
   retObj.results=[];
   google.resultsPerPage = 25
   var nextCounter = 0;
+  var keyWords = "";
+  //unirest.get('http://access.alchemyapi.com/calls/text/TextGetRankedKeywords?apiKey'+)
+  unirest.get("http://access.alchemyapi.com/calls/text/TextGetRankedKeywords?apiKey=uvpxcdm7dzawrrpcjntutdtr" +"&text="+req.params.searchText)
+    .end(function (result) {
+
+      keyWords = result.body;
+
+    });
   var finished = function () {
 
     async.each(retObj.results, function(result, callback) {
