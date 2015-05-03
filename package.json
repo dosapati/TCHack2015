@@ -1,0 +1,19 @@
+{
+  "name": "tchack2015-node-app",
+  "description": "TChack2015 Web application using Node",
+  "homepage": "http://tchack2015.com",
+  "version": "0.0.1",
+  "author": {
+    "name": "Hari Suresh Dosapati",
+    "email": "dosapati@gmail.com",
+    "url": ""
+  },
+  "dependencies": {
+    "express": "^4.12.3",
+    "unirest": "^0.4.0",
+    "google": "^1.1.0"
+  },
+  "scripts": {},
+  "config": {},
+  "devDependencies": {}
+}
